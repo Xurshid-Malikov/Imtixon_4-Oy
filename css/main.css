@@ -1,0 +1,329 @@
+*{
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior:smooth;
+}
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+body{
+  margin: 0;
+}
+.container{
+  display: flex;
+  align-items: center;
+  width: 1350px;
+  padding: 0 20px;
+  margin: 0 auto;
+  background-color: rgba(10, 0, 153, 0.5);
+}
+.users,.posts,.comments {
+  height: 96vh;
+  margin: 10px 0;
+  padding-left: 0;
+  list-style: none;
+  width: 450px;
+  overflow-y: scroll;
+}
+.users::-webkit-scrollbar,
+.posts::-webkit-scrollbar,
+.comments::-webkit-scrollbar{
+  width: 6px;
+}
+.users::-webkit-scrollbar-track,
+.posts::-webkit-scrollbar-track,
+.comments::-webkit-scrollbar-track {
+  background: rgb(189, 183, 183); 
+  border-radius: 8px;
+}
+.users::-webkit-scrollbar-thumb,
+.posts::-webkit-scrollbar-thumb,
+.comments::-webkit-scrollbar-thumb {
+  background: rgb(117, 1, 1); 
+  border-radius: 8px;
+  height: 25px;
+}
+.users__item {
+  margin: 0 20px 20px 0;
+  padding: 20px 20px 0 20px;
+  background-color: rgb(213, 223, 221);
+}
+.users__item::after{
+  content: "";
+  cursor: pointer;
+  width: 70px;
+  height: 60px;
+  display: block;
+  position: relative;
+  top: -55px;
+  left: 17rem;
+  background: url("../images/read-more.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+.users__subname {
+  margin: 0;
+  margin-bottom: 0px;
+  padding-top: 8px;
+  margin-left: 10px;
+  color: rgb(241, 32, 32);
+}
+.users__info{
+  display: flex;
+  align-items: center;
+}
+.users__infoo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.users__name {
+  margin: 0;
+  margin-top: 6px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  color: rgb(25, 0, 255);
+}
+.users__id{
+  font-size: 25px;
+  color: rgb(255, 0, 0);
+}
+.users__address {
+  margin-top: 10px; 
+  margin-bottom: 16px;
+  color: rgb(0, 139, 35);
+}
+.olaa{
+  display: flex;
+  justify-content: space-between;
+}
+.users__street,.users__suite,
+.users__city{
+  display: block;
+}
+.users__address::after{
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  left: 0;
+  top: 6px;
+  margin-left: 5px;
+  background: url("../images/home.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.users__company{
+  display: flex;
+  margin-top: 10px; 
+  flex-direction: column;
+  color: rgb(139, 0, 120);
+}
+.users__phone {
+  color: rgb(4, 2, 117);
+  text-decoration: none;
+}
+.users__phone::after{
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  left: 0;
+  top: 6px;
+  margin-left: 5px;
+  background: url("../images/phone-call.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.users__lat {
+  color: rgb(12, 9, 156);
+  text-decoration: none;
+}
+.users__lat::after{
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  left: -2px;
+  top: 7px;
+  margin-left: 5px;
+  background: url("../images/location.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.users__lng {
+  color: rgb(12, 9, 156);
+  text-decoration: none;
+}
+.users__lng::after{
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  left: 3px;
+  top: 6px;
+  margin-left: 5px;
+  background: url("../images/world-wide-web.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.users__email {
+  color: rgb(12, 9, 156);
+  text-decoration: none;
+}
+.users__email::after{
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  left: 3px;
+  top: 6px;
+  margin-left: 5px;
+  background: url("../images/free-icon-gmail-732200.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.users__links{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.posts__item, .comments__item{
+  position: relative;
+  margin: 0 20px;
+  width: 390px;
+  height: 225px;
+  margin-bottom: 15px;
+  padding: 10px;
+  padding-bottom: 35px;
+  background-color: rgb(213, 223, 221);
+  border-radius: 7px;
+}
+.posts__item::before{
+  content: "";
+  cursor: pointer;
+  width: 70px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  top: 180px;
+  left: 18rem;
+  background: url("../images/read-more.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+.posts__item::after,
+.comments__item::after{
+  z-index: 2;
+  display: block;
+  content: "";
+  left: -16px;
+  top: 215px;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left:20px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid rgb(213, 223, 221);
+}
+.posts__title{
+  margin: 0;
+  margin-bottom: 16px;
+  color: rgb(143, 124, 21);
+  text-transform: capitalize;
+}
+.posts__text{
+  margin: 0;
+  font-size: 18px;
+  color: rgb(248, 64, 18);
+}
+.loader__img{
+  text-align: center;
+  justify-content: center;
+} 
+.comments__title {
+  margin: 0;
+  margin-bottom: 12px;
+  color: rgb(168, 109, 235);
+  text-transform:capitalize;
+}
+.comments__link {
+  margin: 0;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: rgb(22, 2, 131);
+  text-decoration: none;
+}
+.comments__link::after{
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  left: 3px;
+  top: 6px;
+  margin-left: 5px;
+  background: url("../images/free-icon-gmail-732200.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.comments__text {
+  margin: 0;
+  font-size: 18px;
+  color: rgb(70, 165, 157);
+}
+.img{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  justify-content: center;
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
